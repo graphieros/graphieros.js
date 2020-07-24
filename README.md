@@ -1,5 +1,5 @@
 # graphieros.js
-a JS library to edit linear and fractal graphieros in your HTML
+a JS library to edit linear, fractal and molecular graphieros in your HTML
 
 What you need to make it work:
 
@@ -37,6 +37,23 @@ What you need to make it work:
               > one glyph is represented by a sequence separated with dashes, for example <b>qzedxwq-ss</b> will render a hexagon with a central dot. Writing a second sequence will display a half-sized second glyph. A sequence to display two hexagons would therefore be like "qzedxwq-ss qzedxwq-ss".
               
     size of the first glyph (max size)
+    red color from 0 to 255
+    green color from 0 to 255
+    blue color from 0 to 255
+    
+ # molecular graphieros
+ 
+    <section id="myMolecularSVG"></section //where the SVG will appear. Leave it empty.
+    <div id="myMolecule">...</div> //where you write the glyphs using their phonology
+    <script> molecular("myMolecularSVG", "myMolecule", size, R, G, B)</script>
+    
+    The molecular() function takes the following parameters:
+    
+    section ID where the SVG will be displayed
+    
+    div ID where the glyphs are written, separated with spaces. The program will evaluate which presentation to use depending on the number of glyphs. The first glyph is the center one. Up to 6 max additional glyphs.
+    
+    size of the first glyph
     red color from 0 to 255
     green color from 0 to 255
     blue color from 0 to 255
