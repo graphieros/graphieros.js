@@ -7,9 +7,9 @@ What you need to make it work:
 2. format your graphieros as follows:
     
     # linear graphieros
-    <section id="myLinearSVG"></section> where the SVG will appear. Leave it empty.
+    <code><section id="myLinearSVG"></section> where the SVG will appear. Leave it empty.
     <div class="myGlyphs">...</div> where you write graphieros phonotypes
-    <script> linear("myLinearSVG", "myGlyphs", size, R, G, B) </script>
+    <script> linear("myLinearSVG", "myGlyphs", size, R, G, B) </script></code>
     
     The linear() function takes the following parameters:
     
@@ -22,9 +22,9 @@ What you need to make it work:
       
       
     # fractal graphieros
-    <section id="myFractalSVG"></section> where the SVG will appear. Leave it empty.
+    <code><section id="myFractalSVG"></section> where the SVG will appear. Leave it empty.
     <div id="myFractalSequence">...</div> where you write the graphical sequence
-    <script> fractal("myFractalSVG", "myFractalSequence", size, R, G, B) </script>
+    <script> fractal("myFractalSVG", "myFractalSequence", size, R, G, B) </script></code>
     
     The fractal() function takes the following parameters:
     
