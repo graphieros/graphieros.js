@@ -1,3 +1,8 @@
+/*graphieros.js library 1.0
+created by Alec Lloyd Probert
+2020
+*/
+
 let a = 50; //y_top
 let q = 128; //y_mid
 let w = 206; //y_bot
