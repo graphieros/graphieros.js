@@ -1,8 +1,3 @@
-/*graphieros.js library 1.0
-created by Alec Lloyd Probert
-2020
-*/
-
 let a = 50; //y_top
 let q = 128; //y_mid
 let w = 206; //y_bot
@@ -2681,6 +2676,7 @@ let graphieros_dictionnary = [
 function linear(section, p, size, red, green, blue) { 
 
     const main_section = document.getElementById(section);
+    let adjust = size / 2.631578947368421;
  
     const _p = `<path style="stroke-width:10px;stroke-linecap:round;stroke-linejoin:round;fill:none;" d="M `;
     const p_ = '"/>';
@@ -2830,7 +2826,7 @@ function linear(section, p, size, red, green, blue) {
 
             let svg_wrapper = document.createElement("DIV");
             svg_wrapper.style.boxSizing = "border-box";
-            svg_wrapper.className = "svg_paragraph";
+            svg_wrapper.className = `svg_paragraph_${section}`;
             svg_wrapper.appendChild(svg_paragraph);
             main_section.appendChild(svg_wrapper);
 
@@ -2840,13 +2836,13 @@ function linear(section, p, size, red, green, blue) {
 
  
 
-    let all_paragraphs = document.getElementsByClassName("svg_paragraph");
+    let all_paragraphs = document.getElementsByClassName(`svg_paragraph_${section}`);
 
     for(let i = 0; i < all_paragraphs.length; i += 1) {
 
         let one_paragraph = all_paragraphs[i];
         if(i % 2 === 1) {
-            one_paragraph.style.marginTop = "19px";
+            one_paragraph.style.marginTop = `${adjust}px`;
         }
     }
 
