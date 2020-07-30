@@ -2707,7 +2707,7 @@ function linear(section, p, size, red, green, blue) {
             let svg_paragraph = document.createElementNS(xmlns, "svg");
 
             svg_paragraph.style.width = `${size}px`;
-            svg_paragraph.style.background = "rgb()237,237,237)";
+            svg_paragraph.style.background = "transparent";
             svg_paragraph.style.stroke = glyph_color;
             svg_paragraph.style.strokeLinejoin = "round";
             svg_paragraph.style.strokeLinecap = "round";
