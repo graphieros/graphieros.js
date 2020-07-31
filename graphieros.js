@@ -2,6 +2,12 @@
 created by Alec Lloyd Probert
 2020
 */
+
+//TODO
+/*
+include responsiveness
+*/
+
 let a = 50; //y_top
 let q = 128; //y_mid
 let w = 206; //y_bot
@@ -15,6 +21,11 @@ let rm = 173; //x_right_mid
 let r = 218; //x_right
 
 let graphieros_dictionnary = [
+    {
+        name: '_zba',
+        fr: 'syllabe',
+        path: [[rm,a,l,q,r,q,lm,w],[lm,a,lm,a],[rm,w,rm,w]],
+    },
     {
         name: '_nmo',
         fr: 'nommer',
