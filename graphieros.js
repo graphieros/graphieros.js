@@ -2914,7 +2914,6 @@ function fractal(section, f, size, r, g, b, light) {
             G *= 1.3333;
             B *= 1.3333;
         }
-        
         glyph_color = `rgb(${R},${G},${B})`;
     }
 
@@ -2938,7 +2937,7 @@ function fractal(section, f, size, r, g, b, light) {
         let ey = Math.round((Ycenter + size * Math.sin(5 * 2 * Math.PI / 6)) * 100) / 100;
         let dx = Math.round((Xcenter + size * Math.cos(6 * 2 * Math.PI / 6)) * 100) / 100;
         let dy = Math.round((Ycenter + size * Math.sin(6 * 2 * Math.PI / 6)) * 100) / 100;
-    
+
         function coordinate(a,b){
             return `${a} ${b}`;
         }
@@ -2958,6 +2957,8 @@ function fractal(section, f, size, r, g, b, light) {
         let s = [Xcenter,Ycenter];
         let S = coordinate(s[0],s[1]);
 
+        let hex_dots = [X,W,Q,Z,E,D,S];
+
         pure_content.forEach(cord => {
             cord = cord.replace(/[s]/g,` ${S},`);
             cord = cord.replace(/[z]/g,` ${Z},`);
@@ -2974,7 +2975,15 @@ function fractal(section, f, size, r, g, b, light) {
             g.innerHTML += `${_p} class="test" stroke-width="${stk}"style="stroke:${glyph_color}; stroke-linejoin: round; stroke-linecap:round; fill:none;"${_p_}${pth}${p_}`;
             svg_output.appendChild(g);
         });
+
+        hex_dots.forEach(dot => {
+            let g = document.createElementNS(xmlns, "g");
+            g.innerHTML += `${_p} class="test" stroke-width="${stk}"style="stroke:${glyph_color}; stroke-linejoin: round; stroke-linecap:round; fill:none;"${_p_}${dot},${dot}${p_}`;
+            svg_output.appendChild(g);
+        })
+
         fractalize();
+        
     });
 
     svg_container.appendChild(svg_output);
