@@ -2837,7 +2837,7 @@ function linear(section, p, size, red, green, blue) {
                 g.innerHTML += `${_p}${x} ${y_start},${x} ${y_end}${p_}`;
                 svg_paragraph.appendChild(g);
   
-            })
+            });
 
             let svg_wrapper = document.createElement("DIV");
             svg_wrapper.style.boxSizing = "border-box";
@@ -2845,6 +2845,10 @@ function linear(section, p, size, red, green, blue) {
             svg_wrapper.appendChild(svg_paragraph);
             main_section.appendChild(svg_wrapper);
 
+            main_section.style.display = "grid";
+            main_section.style.justifyItems = "center";
+            main_section.style.gridTemplateColumns = `repeat(${graphieros_text.length},1fr)`;
+            main_section.style.width = `${size * (graphieros_text.length)}px`;
         }
 
     }());
