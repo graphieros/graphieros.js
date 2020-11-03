@@ -1,5 +1,8 @@
 # graphieros_react.js
 a JS library ready for use in React.
+<p align="center">
+  <img src="./linear.png" width="350" title="linear mode">
+</p>
 
 
 # graphieros0.2.js
