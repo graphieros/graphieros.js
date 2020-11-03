@@ -1,3 +1,7 @@
+# graphieros_react.js
+a JS library ready for use in React.
+
+
 # graphieros0.2.js
 a JS library to edit linear, fractal and molecular graphieros in your HTML
 
