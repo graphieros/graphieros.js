@@ -1,9 +1,23 @@
 # graphieros_react.js
 a JS library ready for use in React.
-<p align="cneter">
+
+Create components for the 3 writing modes of graphieros:
+
+<b>0. Linear mode:</b>
+
+<p align="center">
   <img src="./linear.png" width="100%" title="linear mode">
 </p>
 
+<b>1. Molecular mode</b>
+<p align="center">
+  <img src="./molecule.png" width="100%" title="linear mode">
+</p>
+
+<b>2. Fractal mode</b>
+<p align="center">
+  <img src="./fractal.png" width="100%" title="linear mode">
+</p>
 
 # graphieros0.2.js
 a JS library to edit linear, fractal and molecular graphieros in your HTML
